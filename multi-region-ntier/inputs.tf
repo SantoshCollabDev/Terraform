@@ -1,3 +1,5 @@
+# Defined Variables
+
 variable "primary_network_cidr" {
   type = list(string)
   description = "This is primary networks cidr range"
