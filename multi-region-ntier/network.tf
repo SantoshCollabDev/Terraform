@@ -8,12 +8,12 @@ resource "azurerm_virtual_network" "primary" {
 
   subnet {
     name           = "web"
-    address_prefix = "192.168.0.0/24"
+    address_prefix = var.web_subnet_cidr
   }
 
   subnet {
     name           = "db"
-    address_prefix = "192.168.1.0/24"
+    address_prefix = var.db_subnet_cidr
   }
   depends_on = [azurerm_resource_group.group]
 }
